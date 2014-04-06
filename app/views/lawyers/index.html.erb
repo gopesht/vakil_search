@@ -1,0 +1,28 @@
+
+
+<div class="container-fluid jumbotron">
+	<div class="row">
+		<h2 class="text-center"><strong>Find Lawyers</strong></h2>
+		<div class="col-md-offset-4 col-md-4">
+			<%= form_for :lawyer, url:{:controller=>"lawyers",:action=>"show"},:class=>"form-control" do |f| %>
+				<!-- i approached this way coz class is not getting assigned with f.select -->
+			  <select class="form-control" name="lawyer[location]">
+			  	<option>Select Location</option>
+			  	<% Lawyer.pluck(:location).uniq.each do |value,index| %>
+			  		<option><%= value %></option>
+			  	<% end %>
+			  </select><br>
+			  <select class="form-control" name="lawyer[service]">
+			  	<option>Select Service</option>
+			  	<% Service.pluck(:service_name).uniq.each do |value,index| %>
+			  		<option><%= value %></option>
+			  	<% end %>
+			  </select><br>
+			  <%= f.submit "Submit", :class=>"btn btn-primary" %>
+			<% end %>
+		</div>
+		
+
+	</div>
+	
+</div>

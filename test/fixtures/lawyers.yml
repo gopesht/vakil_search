@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  lawyer_code: MyString
+  lawyer_name: MyString
+  years_of_experience: 1
+  location: MyString
+  average_rating: 1.5
+
+two:
+  lawyer_code: MyString
+  lawyer_name: MyString
+  years_of_experience: 1
+  location: MyString
+  average_rating: 1.5
